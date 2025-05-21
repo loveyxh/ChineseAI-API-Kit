@@ -17,11 +17,12 @@
 
 ## 已集成的API服务
 
-### 1. Coze工作流API
-- **功能**：AI图像生成
+
+### 1. DeepSeek API
+- **功能**：文本生成、流式输出
 - **文件**：
-  - `coze_workflow_api.py` - Flask服务封装
-  - `coze_workflow_demo.py` - 简单调用示例
+  - `deepseek-api-demo.py` - 基本调用示例
+
 
 ### 2. SiliconFlow API
 - **功能**：文本生成、函数调用、流式输出
@@ -33,10 +34,15 @@
 - **文件**：
   - `kimi-api-demo.py` - 多种能力调用示例
 
-### 4. DeepSeek API
-- **功能**：文本生成、流式输出
+
+### 4. Coze工作流API
+- **功能**：AI图像生成
 - **文件**：
-  - `deepseek-api-demo.py` - 基本调用示例
+  - `coze_workflow_api.py` - Flask服务封装
+  - `coze_workflow_demo.py` - 简单调用示例
+
+
+
 
 ## 技术栈
 
