@@ -1,10 +1,10 @@
 # 中文AI大模型API调用示例集
 
-一个集成了多家中国领先AI大模型API调用示例的项目，包括Coze、SiliconFlow、Moonshot Kimi和DeepSeek等平台，旨在帮助开发者快速了解和使用国内AI服务。
+一个集成了多家领先AI大模型API调用示例的项目，包括Coze、SiliconFlow、Moonshot Kimi和DeepSeek等平台，旨在帮助开发者快速了解和使用国内AI服务。
 
 ## 项目简介
 
-本项目收集整理了多家中国领先AI公司的API调用方式，提供简洁清晰的代码示例，帮助开发者轻松集成各种AI能力，包括：
+本项目收集整理了多家领先AI公司的API调用方式，提供简洁清晰的代码示例，帮助开发者轻松集成各种AI能力，包括：
 
 - **文本生成**：通过DeepSeek、SiliconFlow、Kimi等大模型生成高质量文本内容
 - **图像创作**：使用Coze工作流API生成AI图像
@@ -43,7 +43,6 @@
 
 
 
-
 ## 技术栈
 
 ### 编程语言与基础库
@@ -72,25 +71,7 @@
 
 ## 代码示例
 
-### Coze图像生成
 
-```python
-def GenerateImage(self, prompt):
-    headers = {
-        "Authorization": f"Bearer {self.token}",
-        "Content-Type": "application/json"
-    }
-    
-    payload = {
-        "parameters": {
-            "input": prompt
-        },
-        "workflow_id": self.workflow_id
-    }
-    
-    response = requests.post(self.url, headers=headers, json=payload)
-    # 处理响应...
-```
 
 ### SiliconFlow函数调用
 
@@ -140,6 +121,28 @@ messages = [
 ]
 ```
 
+
+### Coze图像生成
+
+```python
+def GenerateImage(self, prompt):
+    headers = {
+        "Authorization": f"Bearer {self.token}",
+        "Content-Type": "application/json"
+    }
+    
+    payload = {
+        "parameters": {
+            "input": prompt
+        },
+        "workflow_id": self.workflow_id
+    }
+    
+    response = requests.post(self.url, headers=headers, json=payload)
+    # 处理响应...
+```
+
+
 ## 使用说明
 
 ### 环境准备
@@ -166,21 +169,13 @@ export MOONSHOT_API_KEY=your_api_key_here
 
 ### 运行示例
 
-#### Coze工作流示例
-```bash
-# 单次请求示例
-python coze_workflow_demo.py
 
-# 启动Web服务
-python coze_workflow_api.py
+#### DeepSeek示例
+```bash
+python deepseek-api-demo.py
 ```
 
-API服务调用示例:
-```bash
-curl -X POST http://localhost:5000/generate \
--H "Content-Type: application/json" \
--d '{"prompt": "一只拟人化的橘猫"}'
-```
+
 
 #### SiliconFlow示例
 ```bash
@@ -192,9 +187,23 @@ python siliconflow-api-demo.py
 python kimi-api-demo.py
 ```
 
-#### DeepSeek示例
+
+
+#### Coze工作流示例
 ```bash
-python deepseek-api-demo.py
+# 单次请求示例
+python coze_workflow_demo.py
+
+# 启动Web服务
+python coze_workflow_api.py
+```
+
+
+API服务调用示例:
+```bash
+curl -X POST http://localhost:5000/generate \
+-H "Content-Type: application/json" \
+-d '{"prompt": "一只拟人化的橘猫"}'
 ```
 
 ## 注意事项
