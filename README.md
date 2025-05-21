@@ -1,6 +1,7 @@
-# 中文AI大模型API调用示例集
+# AI大模型API调用示例集
 
-一个集成了多家AI大模型API调用示例的项目，包括Coze、SiliconFlow、Moonshot Kimi和DeepSeek等平台，旨在帮助开发者快速了解和使用国内AI服务。
+一个集成了多家AI大模型API调用示例的项目，包括Coze、SiliconFlow、Moonshot Kimi和DeepSeek等平台，
+旨在帮助开发者快速了解和使用国内AI服务。
 
 ## 项目简介
 
